@@ -1,108 +1,69 @@
-import expect from 'expect';
-import { createStore } from 'redux';
-import React from 'react';
-import ReactDOM from 'react-dom';
-import Immutable from 'immutable';
+const state = {
+    pointsc1: ['', 'o', 'x'],
+    pointsc2: ['x', 'o', 'x'],
+    pointsc3: ['x', 'o', 'x'],
+    currentTurn: 0,
+};
 
-// Javascript the good parts
+const render = lState => {
+    const col1 = document.createElement('div');
+    col1.className = 'columna';
 
-const Counter = ({ value, incrementAction, decrementAction, removeAction }) => (
-  <div>
-    <h1>{ value }</h1>
-    <button onClick={ incrementAction }>+</button>
-    <button onClick={ decrementAction }>-</button>
-    <button onClick={ removeAction }>x</button>
-  </div>
-);
+    const col2 = document.createElement('div');
+    col2.className = 'columna';
 
-const CounterList = ({ list }) => (
-  <div>
-    {
-      list.map(
-        (value, i) => (
-          <Counter
-            key={ i }
-            value={ value }
-            index={ i }
-            incrementAction={
-              () => store.dispatch({
-                type: 'INCREMENT',
-                payload: { index: i }
-              })
-            }
-            decrementAction={
-              () => store.dispatch({
-                type: 'DECREMENT',
-                payload: { index: i }
-              })
-            }
-            removeAction={
-              () => store.dispatch({
-                type: 'REMOVE_COUNTER',
-                payload: {
-                  index: i
-                }
-              })
-            }
-          />
-        )
-      )
-    }
-    <button onClick={ () => store.dispatch({ type: 'ADD_COUNTER' }) }>Add counter</button>
-  </div>
-);
+    const col3 = document.createElement('div');
+    col3.className = 'columna';
 
-const validateIndex = (index, list) => 0 <= index && index < list.size;
 
-// Reducer
-const counterList = (state = Immutable.List.of(), action) => {
+    //main rendering
+    root.appendChild(col1);
+    root.appendChild(col2);
+    root.appendChild(col3);
 
-  if(typeof action.payload !== 'undefined'){
-    var { index } = action.payload;
-  }
+    const botonesCol1 = lState.pointsc1.map(
+        (column, i) => {
+            const punto = document.createElement('button');
+            punto.className = `punto ${column}`;
 
-  switch(action.type){
-    case 'ADD_COUNTER':
-      return state.push(0);
+        return punto;
+        }
+    );
 
-    case 'REMOVE_COUNTER':
+    const botonesCol2 = lState.pointsc2.map(
+        (column, i) => {
+            const punto = document.createElement('button');
+            punto.className = `punto ${column}`;
 
-      if(validateIndex(index, state)){
-        return state.delete(index);
-      }
+        return punto;
+        }
+    );
+    
+    const botonesCol3 = lState.pointsc3.map(
+        (column, i) => {
+            const punto = document.createElement('button');
+            punto.className = `punto ${column}`;
 
-      return state;
+        return punto;
+        }
+    );
 
-    case 'INCREMENT':
+    // adjuntar los puntos por columna
+    botonesCol1.forEach(
+        punto => col1.appendChild(punto)
+    );
 
-      if(validateIndex(index, state)){
-        return state.update(index, (v) => v + 1);
-      }
+    // adjuntar los puntos por columna
+    botonesCol2.forEach(
+        punto => col2.appendChild(punto)
+    );
 
-      return state;
+    // adjuntar los puntos por columna
+    botonesCol3.forEach(
+        punto => col3.appendChild(punto)
+    );
 
-    case 'DECREMENT':
 
-      if(validateIndex(index, state)){
-        return state.update(index,  (v) => v - 1);
-      }
-
-      return state;
-
-    default:
-      return state;
-  }
 }
 
-// createStore: reducer --> store
-const store = createStore(counterList);
-
-const render = () => {
-  ReactDOM.render(
-    <CounterList list={ store.getState() } />,
-    document.getElementById('root')
-  )
-}
-
-store.subscribe(render);
-render();
+render (state);
