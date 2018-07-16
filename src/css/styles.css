@@ -1,79 +1,89 @@
 body {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .columna {
-    display: flex;
-    flex-direction: column;
-    width: 7rem;
-    height: 21rem;
-    background: white;
-    margin: 0.5rem 0.5rem 0.5rem 0.5rem;
+  display: flex;
+  flex-direction: column;
+  width: 7rem;
+  height: 21rem;
+  background: white;
+  margin: 0.5rem 0.5rem 0.5rem 0.5rem;
 }
 
 .punto {
-    width: 100%;
-    height: 30%;
-    background-size:contain;
-    background: white;
+  width: 100%;
+  height: 30%;
+  background-size:contain;
+  background: white;
 }
 
 .punto.x{
-    background:url(/images/X.PNG) no-repeat;
-    background-size:contain;
+  background:url(/images/X.PNG) no-repeat;
+  background-size:contain;
 }
 
 .punto.o{
-    background:url(/images/O.PNG) no-repeat;
-    background-size:contain;
+  background:url(/images/O.PNG) no-repeat;
+  background-size:contain;
 }
 
 .iconturn.o {
-    width: 3rem;
-    height: 3rem;
-    background: url(/images/O.PNG) no-repeat;
-    background-size:contain;
+  width: 3rem;
+  height: 3rem;
+  background: url(/images/O.PNG) no-repeat;
+  background-size:contain;
 }
 
 .iconturn.x {
-    width: 3rem;
-    height: 3rem;
-    background: url(/images/X.PNG) no-repeat;
-    background-size:contain;
+  width: 3rem;
+  height: 3rem;
+  background: url(/images/X.PNG) no-repeat;
+  background-size:contain;
 }
 
 .title {
-    width: 100%;
-    background: white;
-    height: 7rem;
-    font-size: 60px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+  width: 100%;
+  background: white;
+  height: 7rem;
+  font-size: 60px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
 .holder {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
 .turn {
-    height: 15rem;
-    width: 100%;
-    align-content: center;
-    background: white;
-    font-size: 40px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+  height: 15rem;
+  width: 100%;
+  align-content: center;
+  background: white;
+  font-size: 40px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.reset {
+  width: 5rem;;
+  height: 2rem;
+  margin-left: 48%;
+  position: relative;
+  font-family: Comfortaa;
+  font-weight: bold;
 }
 
 body {
-    font-family: Comfortaa;
-    font-weight: bold;
+  font-family: Comfortaa;
+  font-weight: bold;
 }
+
