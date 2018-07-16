@@ -1,7 +1,7 @@
 const state = {
     pointsc1: ['', '', ''],
-    pointsc2: ['x', 'x', 'x'],
-    pointsc3: ['o', 'o', 'o'],
+    pointsc2: ['', '', ''],
+    pointsc3: ['', '', ''],
     currentTurn: 0,
 };
 
@@ -119,11 +119,166 @@ const render = lState => {
 
 
     punto0.onclick = () => {
-    lState.currentTurn = (lState.currentTurn + 1) % 2;
-    render(lState);
-    console.log(state.currentTurn);
+        //aplicar el cambio al boton dependiendo del turno que sea
+        if(state.pointsc1[0] === ''){
+            //si es turno 0 poner o y 1 es x
+            if(lState.currentTurn === 0){
+                state.pointsc1[0] = 'o';
+            } else {
+                state.pointsc1[0] = 'x';
+            }
+        //de ser efectivo poner marca cambiar de turno y renderear
+        lState.currentTurn = (lState.currentTurn + 1) % 2;
+        render(lState);
+        } else {
+            alert("ESPACIO OCUPADO");
+        }
+    
     };
 
+    punto1.onclick = () => {
+        //aplicar el cambio al boton dependiendo del turno que sea
+        if(state.pointsc1[1] === ''){
+            //si es turno 0 poner o y 1 es x
+            if(lState.currentTurn === 0){
+                state.pointsc1[1] = 'o';
+            } else {
+                state.pointsc1[1] = 'x';
+            }
+        //de ser efectivo poner marca cambiar de turno y renderear
+        lState.currentTurn = (lState.currentTurn + 1) % 2;
+        render(lState);
+        } else {
+            alert("ESPACIO OCUPADO");
+        }
+    
+    };
+
+    punto2.onclick = () => {
+        //aplicar el cambio al boton dependiendo del turno que sea
+        if(state.pointsc1[2] === ''){
+            //si es turno 0 poner o y 1 es x
+            if(lState.currentTurn === 0){
+                state.pointsc1[2] = 'o';
+            } else {
+                state.pointsc1[2] = 'x';
+            }
+        //de ser efectivo poner marca cambiar de turno y renderear
+        lState.currentTurn = (lState.currentTurn + 1) % 2;
+        render(lState);
+        } else {
+            alert("ESPACIO OCUPADO");
+        }
+    
+    };
+
+    punto3.onclick = () => {
+        //aplicar el cambio al boton dependiendo del turno que sea
+        if(state.pointsc2[0] === ''){
+            //si es turno 0 poner o y 1 es x
+            if(lState.currentTurn === 0){
+                state.pointsc2[0] = 'o';
+            } else {
+                state.pointsc2[0] = 'x';
+            }
+        //de ser efectivo poner marca cambiar de turno y renderear
+        lState.currentTurn = (lState.currentTurn + 1) % 2;
+        render(lState);
+        } else {
+            alert("ESPACIO OCUPADO");
+        }
+    
+    };
+
+    punto4.onclick = () => {
+        //aplicar el cambio al boton dependiendo del turno que sea
+        if(state.pointsc2[1] === ''){
+            //si es turno 0 poner o y 1 es x
+            if(lState.currentTurn === 0){
+                state.pointsc2[1] = 'o';
+            } else {
+                state.pointsc2[1] = 'x';
+            }
+        //de ser efectivo poner marca cambiar de turno y renderear
+        lState.currentTurn = (lState.currentTurn + 1) % 2;
+        render(lState);
+        } else {
+            alert("ESPACIO OCUPADO");
+        }
+    
+    };
+
+    punto5.onclick = () => {
+        //aplicar el cambio al boton dependiendo del turno que sea
+        if(state.pointsc2[2] === ''){
+            //si es turno 0 poner o y 1 es x
+            if(lState.currentTurn === 0){
+                state.pointsc2[2] = 'o';
+            } else {
+                state.pointsc2[2] = 'x';
+            }
+        //de ser efectivo poner marca cambiar de turno y renderear
+        lState.currentTurn = (lState.currentTurn + 1) % 2;
+        render(lState);
+        } else {
+            alert("ESPACIO OCUPADO");
+        }
+    
+    };
+
+    punto6.onclick = () => {
+        //aplicar el cambio al boton dependiendo del turno que sea
+        if(state.pointsc3[0] === ''){
+            //si es turno 0 poner o y 1 es x
+            if(lState.currentTurn === 0){
+                state.pointsc3[0] = 'o';
+            } else {
+                state.pointsc3[0] = 'x';
+            }
+        //de ser efectivo poner marca cambiar de turno y renderear
+        lState.currentTurn = (lState.currentTurn + 1) % 2;
+        render(lState);
+        } else {
+            alert("ESPACIO OCUPADO");
+        }
+    
+    };
+
+    punto7.onclick = () => {
+        //aplicar el cambio al boton dependiendo del turno que sea
+        if(state.pointsc3[1] === ''){
+            //si es turno 0 poner o y 1 es x
+            if(lState.currentTurn === 0){
+                state.pointsc3[1] = 'o';
+            } else {
+                state.pointsc3[1] = 'x';
+            }
+        //de ser efectivo poner marca cambiar de turno y renderear
+        lState.currentTurn = (lState.currentTurn + 1) % 2;
+        render(lState);
+        } else {
+            alert("ESPACIO OCUPADO");
+        }
+    
+    };
+
+    punto8.onclick = () => {
+        //aplicar el cambio al boton dependiendo del turno que sea
+        if(state.pointsc3[2] === ''){
+            //si es turno 0 poner o y 1 es x
+            if(lState.currentTurn === 0){
+                state.pointsc3[2] = 'o';
+            } else {
+                state.pointsc3[2] = 'x';
+            }
+        //de ser efectivo poner marca cambiar de turno y renderear
+        lState.currentTurn = (lState.currentTurn + 1) % 2;
+        render(lState);
+        } else {
+            alert("ESPACIO OCUPADO");
+        }
+    
+    };
 
 }
 
