@@ -133,7 +133,7 @@ const render = lState => {
         } else {
             alert("ESPACIO OCUPADO");
         }
-    
+        revisargnd();
     };
 
     punto1.onclick = () => {
@@ -151,7 +151,7 @@ const render = lState => {
         } else {
             alert("ESPACIO OCUPADO");
         }
-    
+        revisargnd();
     };
 
     punto2.onclick = () => {
@@ -169,7 +169,7 @@ const render = lState => {
         } else {
             alert("ESPACIO OCUPADO");
         }
-    
+        revisargnd();
     };
 
     punto3.onclick = () => {
@@ -187,7 +187,7 @@ const render = lState => {
         } else {
             alert("ESPACIO OCUPADO");
         }
-    
+        revisargnd();
     };
 
     punto4.onclick = () => {
@@ -205,7 +205,7 @@ const render = lState => {
         } else {
             alert("ESPACIO OCUPADO");
         }
-    
+        revisargnd();
     };
 
     punto5.onclick = () => {
@@ -223,7 +223,7 @@ const render = lState => {
         } else {
             alert("ESPACIO OCUPADO");
         }
-    
+        revisargnd();
     };
 
     punto6.onclick = () => {
@@ -241,7 +241,7 @@ const render = lState => {
         } else {
             alert("ESPACIO OCUPADO");
         }
-    
+        revisargnd();
     };
 
     punto7.onclick = () => {
@@ -259,7 +259,7 @@ const render = lState => {
         } else {
             alert("ESPACIO OCUPADO");
         }
-    
+        revisargnd();
     };
 
     punto8.onclick = () => {
@@ -277,8 +277,79 @@ const render = lState => {
         } else {
             alert("ESPACIO OCUPADO");
         }
-    
+        revisargnd();
     };
+
+    //revisar el ganador
+    function revisargnd (){ 
+        //fila 1
+        if(state.pointsc1[0] == state.pointsc2[0] && state.pointsc1[0] == state.pointsc3[0] && state.pointsc1[0] == 'o'){
+            alert("GANADOR O");
+        }
+        if(state.pointsc1[0] == state.pointsc2[0] && state.pointsc1[0] == state.pointsc3[0] && state.pointsc1[0] == 'x'){
+            alert("GANADOR X");
+        }
+
+        //fila 2
+        if(state.pointsc1[1] == state.pointsc2[1] && state.pointsc1[1] == state.pointsc3[1] && state.pointsc1[1] == 'o'){
+            alert("GANADOR O");
+        }
+        if(state.pointsc1[1] == state.pointsc2[1] && state.pointsc1[1] == state.pointsc3[1] && state.pointsc1[1] == 'x'){
+            alert("GANADOR X");
+        }
+
+        //fila 3
+        if(state.pointsc1[2] == state.pointsc2[2] && state.pointsc1[2] == state.pointsc3[2] && state.pointsc1[2] == 'o'){
+            alert("GANADOR O");
+        }
+        if(state.pointsc1[2] == state.pointsc2[2] && state.pointsc1[2] == state.pointsc3[2] && state.pointsc1[2] == 'x'){
+            alert("GANADOR X");
+        }
+
+        //columna 1
+        if(state.pointsc1[0] == state.pointsc1[1] && state.pointsc1[0] == state.pointsc1[2] && state.pointsc1[0] == 'o'){
+            alert("GANADOR O");
+        }
+        if(state.pointsc1[0] == state.pointsc1[1] && state.pointsc1[0] == state.pointsc1[2] && state.pointsc1[0] == 'x'){
+            alert("GANADOR X");
+        }
+
+        //columna 2
+        if(state.pointsc2[0] == state.pointsc2[1] && state.pointsc2[0] == state.pointsc2[2] && state.pointsc2[0] == 'o'){
+            alert("GANADOR O");
+        }
+        if(state.pointsc2[0] == state.pointsc2[1] && state.pointsc2[0] == state.pointsc2[2] && state.pointsc2[0] == 'x'){
+            alert("GANADOR X");
+        }
+
+        //columna 3
+        if(state.pointsc3[0] == state.pointsc3[1] && state.pointsc3[0] == state.pointsc3[2] && state.pointsc3[0] == 'o'){
+            alert("GANADOR O");
+        }
+        if(state.pointsc3[0] == state.pointsc3[1] && state.pointsc3[0] == state.pointsc3[2] && state.pointsc3[0] == 'x'){
+            alert("GANADOR X");
+        }
+
+        //diagonales
+
+        //up der - low izq
+        if(state.pointsc1[0] == state.pointsc2[1] && state.pointsc1[0] == state.pointsc3[2] && state.pointsc1[0] == 'o'){
+            alert("GANADOR O");
+        }
+        if(state.pointsc1[0] == state.pointsc2[1] && state.pointsc1[0] == state.pointsc3[2] && state.pointsc1[0] == 'x'){
+            alert("GANADOR X");
+        }
+
+        //low der - up izq
+        if(state.pointsc1[2] == state.pointsc2[1] && state.pointsc1[2] == state.pointsc3[0] && state.pointsc1[2] == 'o'){
+            alert("GANADOR O");
+        }
+        if(state.pointsc1[2] == state.pointsc2[1] && state.pointsc1[2] == state.pointsc3[0] && state.pointsc1[2] == 'x'){
+            alert("GANADOR X");
+        }
+
+    }
+
 
 }
 
